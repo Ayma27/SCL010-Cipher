@@ -1,15 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" dir="ltr">
+   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>Hola mundo!</h1>
-    </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+    <title>La Llave, tu entrada secreta.</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+<header>
+<div id="pagina1">
+              <h1 id="hello">HAZ LLEGADO A LA PUERTA</h1>
+              <img class="logo" src="logo.jpg" alt="logolallave">
+              <button type="button" id="welcome"> Ingresa </button>
+              <h4>¿Eres anfitrion?</h4>
+              <button type="button" id="clickea">Click</button>
+              </div></header>
+
+<section>
+<div id="pagina2">
+              <textarea cols="50" rows="3" autofocus id="cuadro1" size="150" required></textarea>
+              <br>
+              <textarea cols="50" rows="3" autofocus id="cuadro2" size="150"></textarea>
+              <br>
+              <select id="selector1" placeholder="Llave">
+              <option value="1">1</option>
+              <option value="3">3</option>
+              <option value="7">7</option>
+              <option value="11">11</option>
+              <option value="15">15</option>
+              </select>
+<div id="button1">
+              <button type="button" id="cifrar">CIFRA</button>
+              </div>
+<div id="button2">
+              <button type="button" id="descifrar">DESCIFRA</button>
+              </div>
+<div id="box">
+              <p>¿Asistirás?</p>
+              <input type="checkbox" id="check1" value="1">SI
+              <input type="checkbox" id="check2" value="2">NO
+              <button id="frmSend" action="#">Enviar</button>
+              </div>
+              </div>
+
+<div id="pagina3">
+              <h2>NORMAS E INDICACIONES</h2>
+              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+              <button type="button" id="aceptar">ACEPTO</button>
+              <button type="button" id="noAceptar">NO ACEPTO</button>
+              </div>
+
+<div id="pagina4">
+              <h2>¡YA CASI TERMINAS!</h2>
+              <h3>Ingresa tu email</h3>
+              <input type="email" id="mail" pattern="" placeholder="Escribe tu mail aquí" required>
+              <button type="button" id="enviado">ENVIAR</button>
+</div>
+
+<div id="pagina5">
+              <h2>FELICITACIONES,</h2>
+              <h3> Ya estas en la lista de invitados, atento a tu correo para más indicaciones. ¡Nos vemos!</h3>
+</div>
+
+<div id="pagina6">
+              <h2>¡LO SENTIMOS!,</h2>
+              <h3> La puerta esta cerrada. Vuelve cuando tengas un código de invitación.</h3>
+</div>
+        </section>
+    <footer>
+      <a href=""></a>
+    </footer>
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
   </body>
 </html>

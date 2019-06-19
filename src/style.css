@@ -1,1 +1,9 @@
-/* Acá va tu código */
+body {
+/*  background-image: url(img/imagen4.jpg);*/
+  }
+
+#hello {
+  font-size: "100";
+  position: absolute;
+  padding: 20px;
+}
