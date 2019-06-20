@@ -52,7 +52,7 @@ btnDescifrar.addEventListener("click", () => {
   let newMessage = document.getElementById("cuadro2").value;
   let newMessageM = newMessage.toUpperCase();
   let offSet= parseInt(document.getElementById("selector1").value);
-/*let result="";
+  /*let result="";
   for(let i = 0; i < newMessageM.length; i++) {
   //console.log(newMessageM[i]);
   let numeroAscii = newMessageM.charCodeAt(i);
@@ -95,13 +95,13 @@ btnAgree.addEventListener('click', star3);
 function star3() {
 document.getElementById("pagina3").style.display="none";
 document.getElementById("pagina4").style.display="block";
-};
+}
 const btnNotAgree = document.getElementById("noAceptar");
 btnNotAgree.addEventListener('click', star4);
 function star4() {
 document.getElementById("pagina3").style.display="none";
 document.getElementById("pagina6").style.display="block";
-};
+}
 //Pagina 4 petición de email
 const btnEmail = document.getElementById("enviado");
 btnEmail.addEventListener('click', star5);

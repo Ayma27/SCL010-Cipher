@@ -12,16 +12,20 @@ describe('cipher', () => {
     });
     it('debería retornar "HIJKLMNOPQRSTUVWXYZABCDEFG" para "ABCDEFGHIJKLMNOPQRSTUVWXYZ" con offset 33', () => {
       assert.equal(window.cipher.encode("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 33),"HIJKLMNOPQRSTUVWXYZABCDEFG")
-    }
-  );
+    });
+    it('debería retornar mismo caracter si es diferente a las mayusculas', () => {
+      assert.equal(window.cipher.encode("123", 15), "123")
   });
-
   describe('window.cipher.decode', () => {
     it('debería ser una función', () => {
       assert.equal(typeof window.cipher.decode, 'function');
     });
     it('debería retornar "ABCDEFGHIJKLMNOPQRSTUVWXYZ" para "HIJKLMNOPQRSTUVWXYZABCDEFG" con offset 33', () => {
-      assert.equal(window.cipher.decode("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 33), "HIJKLMNOPQRSTUVWXYZABCDEFG")
+      assert.equal(window.cipher.decode("HIJKLMNOPQRSTUVWXYZABCDEFG", 33), "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     });
+    it('debería retornar mismo caracter si es diferente a las mayusculas', () => {
+      assert.equal(window.cipher.decode("123", 15), "123")
   });
 });
+});
+})
