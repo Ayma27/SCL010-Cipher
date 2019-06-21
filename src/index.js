@@ -1,6 +1,6 @@
 //LLAMADA A LA FUNCION PARA INICIALIZAR RELOJ
 window.onload = function () {
-    let time = setTimeout(function(){ startTime() }, 500);
+  startTime();
 };
 //ocultar para mostrar solo pagina 1
 document.getElementById("pagina2").style.display="none";
