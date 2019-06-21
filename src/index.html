@@ -4,15 +4,22 @@
     <meta charset="utf-8">
     <title>La Llave, tu entrada secreta.</title>
     <link rel="stylesheet" href="style.css">
+    <link href="logo.png" rel="shortcut icon">
     </head>
-<body>
+<body onload="startTime()", background="imagen4.jpg">
+             <div id="clockdate">
+             <div class="clockdate-wrapper">
+             <div id="clock"></div>
+             <div id="date"></div>
+             </div>
+             </div>
 <header>
 <div id="pagina1">
               <h1 id="hello">HAZ LLEGADO A LA PUERTA</h1>
               <img class="logo" src="logo.png" alt="logolallave">
               <br>
-              <button type="button" id="welcome"> INGRESA </button>
-              <h4 class="txt1">¿Eres anfitrion?</h4>
+              <button type="button" id="welcome"> INGRESA </button> <br>
+              <span class="txt1">¿Eres anfitrion?</span>
               <button type="button" id="clickea">Click</button>
               </div></header>
 
@@ -22,14 +29,14 @@
               <br>
               <textarea cols="50" rows="3" autofocus id="cuadro2" size="150"></textarea>
               <br>
-              <p>Tu llave</p>
               <select id="selector1" placeholder="Llave">
               <option value="1">1</option>
               <option value="3">3</option>
               <option value="7">7</option>
               <option value="11">11</option>
               <option value="15">15</option>
-              </select>
+              </select>  <span>  Tu llave</span>
+              <br>
 
 <div id="button1">
               <button type="button" id="cifrar">CIFRA</button>
@@ -38,7 +45,7 @@
               <button type="button" id="descifrar">DESCIFRA</button>
               </div>
 <div id="box">
-              <p>¿Asistirás?</p>
+              <span> ¿Asistirás?</span>
               <input type="checkbox" id="check1" value="1">SI
               <input type="checkbox" id="check2" value="2">NO
               <button id="frmSend" action="#">Enviar</button>

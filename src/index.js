@@ -1,3 +1,7 @@
+//LLAMADA A LA FUNCION PARA INICIALIZAR RELOJ
+window.onload = function () {
+    let time = setTimeout(function(){ startTime() }, 500);
+};
 //ocultar para mostrar solo pagina 1
 document.getElementById("pagina2").style.display="none";
 document.getElementById("pagina3").style.display="none";
@@ -23,7 +27,23 @@ document.getElementById("cuadro2").style.display="none";
 document.getElementById("button2").style.display="none";
 document.getElementById("pagina2").style.display="block";
 }
-
+//RELOJ
+function startTime() {
+    let today = new Date();
+    let hr = today.getHours();
+    let min = today.getMinutes();
+    let sec = today.getSeconds();
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+}
+startTime();
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
 // Entrega mensaje del cuadro1 en mayusculas y lo recorre.
 const btnCifrar = document.getElementById("cifrar");
 btnCifrar.addEventListener('click', () =>{
