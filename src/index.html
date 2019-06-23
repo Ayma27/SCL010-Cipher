@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="logo.png" rel="shortcut icon">
     </head>
-<body background="imagen4.jpg">
+<body background="imagen4.jpg" id="fondo">
              <div id="clockdate">
              <div class="clockdate-wrapper">
              <div id="clock"></div>
@@ -15,48 +15,57 @@
              </div>
 <header>
 <div id="pagina1">
-              <h1 id="hello">HAZ LLEGADO A LA PUERTA</h1>
               <img class="logo" src="logo.png" alt="logolallave">
               <br>
               <button type="button" id="welcome"> INGRESA </button> <br>
-              <span class="txt1">¿Eres anfitrion?</span>
+              <br> <span class="txt1">¿Eres anfitrion?</span>
               <button type="button" id="clickea">Click</button>
               </div></header>
 
 <section>
 <div id="pagina2">
+              <br><br>
               <textarea cols="50" rows="3" autofocus id="cuadro1" size="150" required></textarea>
               <br>
               <textarea cols="50" rows="3" autofocus id="cuadro2" size="150"></textarea>
-              <br>
+              <br><br>
+              <div id="key">
               <select id="selector1" placeholder="Llave">
               <option value="1">1</option>
               <option value="3">3</option>
               <option value="7">7</option>
               <option value="11">11</option>
               <option value="15">15</option>
-              </select>  <span>  Tu llave</span>
-              <br>
+              </select><span>   TU LLAVE</span>
+              <br> </div>
 
-<div id="button1">
+<div id="button1"><br>
               <button type="button" id="cifrar">CIFRA</button>
-              </div>
+            </div>
 <div id="button2">
+  <br>
               <button type="button" id="descifrar">DESCIFRA</button>
-              </div>
+            </div><br>
 <div id="box">
-              <span> ¿Asistirás?</span>
+              <span id="txt2"> ¿Puedes asistir?</span>
               <input type="checkbox" id="check1" value="1">SI
               <input type="checkbox" id="check2" value="2">NO
-              <button id="frmSend" action="#">Enviar</button>
+              <button id="frmSend" action="#">Enviar </button>
               </div>
               </div>
 
 <div id="pagina3">
-              <h2>NORMAS E INDICACIONES</h2>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-              <button type="button" id="aceptar">ACEPTO</button>
-              <button type="button" id="noAceptar">NO ACEPTO</button>
+              <h2 id="normas">NORMAS E INDICACIONES</h2>
+              <h3>Haz llegado a la “La llave”, si has llegado a nuestra puerta probablemente fuiste invitado por un anfitrión, quién confío en tu discreción y reconoce tu pasión por el rubro. Con tu código puedes acceder a los detalles del evento, pero aun no eres parte de la lista de invitados oficial, para ello primero debes leer y aceptar nuestras normas, y dejarnos tu email para poder enviarte las indicaciones finales. Te detallamos las normas a continuación: <br>
+•	Debes mantener discreción sobre el evento, el lugar a realizar y su horario, ya que no queremos llamar la atención. <br>
+•	La invitación es personal, por lo tanto no puedes llevar a otra persona, a menos que esa persona también haya sido invitada y posea un código de invitación. <br>
+•	En el evento no hay pagos ni transacciones comerciales, así que debes reservar tu cupo siguiendo las indicaciones que te enviaremos por email. <br>
+•	Debes ser respetuoso con los otros miembros de la comunidad, no se aceptarán faltas de respeto o violencia de ningún tipo. Cualquiera de estas conductas te dejará fuera de los siguientes eventos y serás puesto en la lista negra. <br>
+•	Si por algún motivo no puedes asistir al evento por favor, avísanos al mismo email por el cual te contactaremos, para que otra persona pueda ocupar ese cupo. <br>
+•	Cuando llegues al lugar del evento, se confirmará tu identidad con tu email. Por ello, da lo mismo que tengas los datos del lugar, no podrás acceder al evento a menos que hayas seguido todos los pasos y hayas confirmado con tu código de invitación personal. <br>
+Por último, te invitamos a ser parte de la comunidad y seguir asistiendo a nuestros eventos, sigue los pasos y ¡disfruta! </h3>
+            <div id="botones">  <button type="button" id="aceptar">ACEPTO</button>
+              <button type="button" id="noAceptar">NO ACEPTO</button></div>
               </div>
 
 <div id="pagina4">
@@ -68,16 +77,16 @@
 
 <div id="pagina5">
               <h2>FELICITACIONES,</h2>
-              <h3> Ya estas en la lista de invitados, atento a tu correo para más indicaciones. ¡Nos vemos!</h3>
+              <h3> Ya estas en la lista de invitados, atento a tu correo para más indicaciones. <br><br> ¡NOS VEMOS!</h3>
 </div>
 
 <div id="pagina6">
               <h2>¡LO SENTIMOS!,</h2>
-              <h3> La puerta esta cerrada. Vuelve cuando tengas un código de invitación.</h3>
+              <h3> La puerta esta cerrada. Vuelve cuando tengas un código de invitación. <br><br> ¡HASTA LUEGO!</h3>
 </div>
         </section>
-    <footer>
-      <a href=""></a>
+    <footer id="end">
+          <span> <p>Copyright; 2019 Aymara Rose, Laboratoria. <a href="https://github.com/Ayma27"><b>GIT HUB</b></a></p> </span>
     </footer>
       <script src="cipher.js"></script>
       <script src="index.js"></script>
