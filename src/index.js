@@ -36,8 +36,8 @@ function startTime() {
     min = checkTime(min);
     sec = checkTime(sec);
     document.getElementById("clock").innerHTML = hr + " : " + min + " : " + sec;
+ setTimeout(startTime, 500);
 }
-startTime();
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i;
