@@ -1,4 +1,4 @@
-//LLAMADA A LA FUNCION PARA INICIALIZAR RELOJ
+//Llamdo de funcion para inicializar reloj
 window.onload = function () {
   startTime();
 };
@@ -8,6 +8,7 @@ document.getElementById("pagina3").style.display="none";
 document.getElementById("pagina4").style.display="none";
 document.getElementById("pagina5").style.display="none";
 document.getElementById("pagina6").style.display="none";
+
 //boton de inicio lleva a pagina 2 para clientes
 const btnWelcome = document.getElementById("welcome");
 btnWelcome.addEventListener('click', star);
@@ -17,6 +18,7 @@ document.getElementById("cuadro1").style.display="none";
 document.getElementById("button1").style.display="none";
 document.getElementById("pagina2").style.display="block";
 }
+
 //boton de click lleva a pagina 2 para anfitriones
 document.getElementById("pagina2").style.display="none";
 const btnClickea = document.getElementById("clickea");
@@ -27,7 +29,8 @@ document.getElementById("cuadro2").style.display="none";
 document.getElementById("button2").style.display="none";
 document.getElementById("pagina2").style.display="block";
 }
-//RELOJ
+
+//Reloj
 function startTime() {
     let today = new Date();
     let hr = today.getHours();
@@ -44,46 +47,22 @@ function checkTime(i) {
     }
     return i;
 }
-// Entrega mensaje del cuadro1 en mayusculas y lo recorre.
+
+// Funcion para boton cifrar
 const btnCifrar = document.getElementById("cifrar");
 btnCifrar.addEventListener('click', () =>{
   let offSet = parseInt(document.getElementById("selector1").value);
-//  console.log(offSet);
   let message = document.getElementById("cuadro1").value;
   let mayuscula = message.toUpperCase();
-  /* funcion establecida en el cipher
-  let result ="";
-  for (let i = 0; i < mayuscula.length; i++) {
-  let numeroAscii = mayuscula.charCodeAt(i);
-  console.log(numeroAscii);
-  let codigoAscii = (numeroAscii - 65 + offSet) % 26 + 65;
-  console.log(codigoAscii);
-  let codigoAsciiFinal = String.fromCharCode(codigoAscii);
-  console.log(codigoAsciiFinal);
-  result = result + codigoAsciiFinal;
-  console.log(result);
-}*/
 document.getElementById("cuadro1").value=window.cipher.encode(mayuscula,offSet);
 });
 
-// Muestra mensaje descrifrafo o cifrado segun selección
+// Funcion para boton descifrar
 const btnDescifrar = document.getElementById("descifrar");
 btnDescifrar.addEventListener("click", () => {
   let newMessage = document.getElementById("cuadro2").value;
   let newMessageM = newMessage.toUpperCase();
   let offSet= parseInt(document.getElementById("selector1").value);
-  /*let result="";
-  for(let i = 0; i < newMessageM.length; i++) {
-  //console.log(newMessageM[i]);
-  let numeroAscii = newMessageM.charCodeAt(i);
-  console.log(numeroAscii);
-  let codigoAscii = ((numeroAscii + 65 - offSet) % 26) + 65;
-  console.log (codigoAscii);
-  let codigoAsciiFinal = String.fromCharCode(codigoAscii);
-  console.log(codigoAsciiFinal);
-  result = result + codigoAsciiFinal;
-  console.log(result);
-}*/
 document.getElementById("cuadro2").value=window.cipher.decode(newMessageM,offSet);
 });
 
@@ -91,7 +70,8 @@ document.getElementById("cuadro2").value=window.cipher.decode(newMessageM,offSet
 const check1 = document.getElementById("check1");
 const check2 = document.getElementById("check2");
 const formulario = document.getElementById("frmSend");
-//PARA VALIDAR QUE SOLO HAYA UNO SELECCIONADO
+
+//Valida que solo se pueda seleccionar un check
 check1.addEventListener('click', () => {
 if (check2.checked == true){
   check2.checked = false;
@@ -100,7 +80,8 @@ check2.addEventListener('click', () => {
 if (check1.checked == true){
   check1.checked = false;
 }});
-//PARA ENVIAR AL SITIO
+
+//Te envia a la pagina sigueinte segun respuesta del check
 formulario.addEventListener('click', () => {
 if (check1.checked == true){
   document.getElementById("pagina2").style.display="none";
@@ -109,6 +90,7 @@ if (check1.checked == true){
   document.getElementById("pagina2").style.display="none";
   document.getElementById("pagina6").style.display="block";
 }});
+
 //Pagina 3 y botones
 const btnAgree = document.getElementById("aceptar");
 btnAgree.addEventListener('click', star3);
@@ -133,7 +115,3 @@ alert("Debes ingresar tu mail");
 document.getElementById("pagina4").style.display="none";
 document.getElementById("pagina5").style.display="block";
 }}
-
-//Pagina 5 felicitaciones y fin del sitio
-
-//Pagina 6 y despedida del sitio
